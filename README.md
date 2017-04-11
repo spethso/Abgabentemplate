@@ -1,0 +1,72 @@
+ReadMe
+=====
+
+Inoffizielles LaTeX Template für Datenstrukturen und Algorithmen Abgaben an der Universität Stuttgart. Das Template kann auch für Abgaben anderer Module genutzt werden.
+Weitere Informationen unter: https://github.com/spethso/Abgabentemplate
+
+Quick Start
+-----------
+Falls du git nicht verwenden möchtest, downloade einfach: https://github.com/spethso/Abgabentemplate
+
+Empfohlene LaTeX Umgebungen
+---------------------------
+* Offline: Rechtschreibprüfung ist verfügbar in [TeXnicCenter](http://www.texniccenter.org/). 
+* Bitte downloade [Sumatra PDF](http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader-de.html) als Viewer und verbinde die beiden.
+  Beachte dabei die [Anleitung](http://tex.stackexchange.com/questions/116981/how-to-configure-texniccenter-2-0-with-sumatra-2013-2016-version) für die Konfiguration.
+  Verwende [JabRef](http://jabref.sf.net) um deine Literatur zu verwalten.
+* Online: [overleaf](https://www.overleaf.com/). Ebenfalls mit [git support](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.VYFC2UZejkU).
+
+Eine komplette Liste an LaTeX Editoren findest du unter [LaTeX Editors/IDEs question on TeX.SX](http://tex.stackexchange.com/questions/339/latex-editors-ides).
+
+### Empfohlene Einstellungen von MiKTeX
+* Installiere MiKTeX für: "Only for: `username`"
+* Installiere MiKTeX nach: `C:\MiKTeX`. Dies ermöglicht das Durchsuchen nach der Dokumentation in `C:\MiKTeX29\doc\latex`
+* Installiere fehlende Pakete "on the fly": `Yes`
+
+LaTeX Compilation
+=================
+Das Template kann durch Verwendung normaler LaTeX Befehle kompiliert werden.
+Deine LaTeX Umgebung (wie [TeXnicCenter](http://www.texniccenter.org/)) sollte sich um das kompilieren kümmern.
+Sollte sich bei der Paketinstallation ein Dialog öffnen, setze den entsprechenden Haken, dass die Pakete "on the fly" installiert werden.
+
+Falls du das Template mit der Kommandozeile kompilieren möchtest, kannst du folgende Tools verwenden.
+
+Automatisches kompilieren unter Verwendung eines makefiles
+--------------------------------
+Für alle, die [cygwin](http://www.cygwin.com/) installiert haben oder eine Linux Maschine laufen lassen, bietet dieses Template ein einfaches LaTeX makefile an.
+Solltest du die Hauptdatei umbenennen, ändere den Dateinamen ebenfalls im makefile.
+Um das makefile aufzurufen, führe folgenden Befehl in deiner Kommandozeile aus.
+
+    make
+
+Beim nach dem Ausführen des makefiles werden alle temporären Dateien gelöscht und die "ExXX_LastnameOfMembers.pdf" geöffnet.
+
+Alternativen:
+* https://github.com/akerbos/ltx2any
+* https://github.com/shiblon/latex-makefile
+* https://github.com/ransford/pdflatex-makefile
+* https://github.com/brotchie/latex-rubber-makefile
+* [LaTeX-Mk](http://latex-mk.sourceforge.net/)
+* Ebenfalls http://stackoverflow.com/questions/1240037/recommended-build-system-for-latex und http://tex.stackexchange.com/questions/40738/how-to-properly-make-a-latex-project
+
+Automatisches kompilieren unter Verwendung der build.bat (Windows)
+--------------------------------
+Für alle Windows Nutzer, die [cygwin](http://www.cygwin.com/) installiert haben, bietet dieses Template eine einfache build.bat an.
+Die build.bat Datei ruft dabei das makefile auf.
+Zuvor wird jedoch die alte ExXX_LastnameOfMembers.pdf gelöscht.
+Nach dem Ausführen der build.bat wird die erzeugte ExXX_LastnameOfMembers.pdf geöffnet.
+Solltest du die Hauptdatei umbenennen, ändere den Dateinamen ebenfalls im makefile.
+
+Beinhaltete Dateien und Ordner
+==============================
+* ExXX_LastnameOfMembers.tex
+  * Hauptdatei
+  * Füge hier den Inhalt ein, oder binde weitere Dateien ein
+  * Weitere Dateien können mit `\input` eingebunden werden
+* Usepackage.tex: Datei für das Einbinden von Paketen
+* FormatAndHeader.tex: Datei mit den Formatierungen und den Headereinstellungen.
+* makefile: Das makefile
+* README.md: Diese Datei
+* figures/: Ordner der alle Bilder beinhaltet.
+  Durch Verwendung von PDFLaTeX ist es möglich PDFs, JPGs, PNGs, ... zu verwenden. Es ist empfehlenswert PDFs zu nutzen, um "smooth scaling" zu ermöglichen.
+* ExXX_LastnameOfMembers.tcp: TeXnicCenter Projekt um das kompilieren mit mehreren Dateien zu erleichtern.

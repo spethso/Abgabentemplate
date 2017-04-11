@@ -1,0 +1,37 @@
+% LaTeX Template für Datenstrukturen und Algorithmen Abgaben
+% Autor: Sandro Speth
+% Bei Fragen: Sandro.Speth@studi.informatik.uni-stuttgart.de
+%-----------------------------------------------------------
+% Modul beinhaltet Befehl fuer Aufgabennummerierung,
+% sowie die Header Informationen.
+
+% Überschreibt enumerate Befehl, sodass 1. Ebene Items mit
+% (a), (b), etc. nummeriert werden.
+\renewcommand{\theenumi}{(\alph{enumi})}
+\renewcommand{\labelenumi}{\text{\theenumi}}
+
+% Counter für das Blatt und die Aufgabennummer.
+% Ersetze die Nummer des Übungsblattes und die Nummer der Aufgabe
+% den Anforderungen entsprechend.
+% Beachte:
+% \setcounter{countername}{number}: Legt den Wert des Counters fest
+% \stepcounter{countername}: Erhöht den Wert des Counters um 1.
+\newcounter{sheetnr}
+\setcounter{sheetnr}{0} % Nummer des Übungsblattes
+\newcounter{exnum}
+\setcounter{exnum}{1} % Nummer der Aufgabe
+
+% Befehl für die Aufgabentitel
+\newcommand{\exercise}[1]{\section*{Aufgabe \theexnum\stepcounter{exnum}: #1}} % Befehl für Aufgabentitel
+
+% Formatierung der KopfzeileÖ
+% \rhead: Setzt rechten Teil der Kopfzeile mit
+% Namen und Matrikelnummern aller Bearbeiter
+\rhead{Max Mustermann (1234567)\\
+Klaus Kleber (1234568)\\
+Melanie Marshmallow (1234569)}
+% \lhead: Setzt linken Teil der Kopfzeile mit
+% Modulnamen, Semester und Übungsblattnummer
+\lhead{Datenstrukturen \& Algorithmen\\
+Sommersemester 2017\\
+Übungsblatt \thesheetnr}
