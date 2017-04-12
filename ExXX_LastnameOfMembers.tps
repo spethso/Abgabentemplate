@@ -18,7 +18,7 @@ Document=ExXX_LastnameOfMembers.tex
 
 [Frame0_View0,0]
 TopLine=0
-Cursor=490
+Cursor=2
 
 [Frame1]
 Flags=0
@@ -35,8 +35,8 @@ Class=LaTeXView
 Document=Usepackage.tex
 
 [Frame1_View0,0]
-TopLine=3
-Cursor=446
+TopLine=0
+Cursor=59
 
 [Frame2]
 Flags=0
@@ -53,10 +53,10 @@ Class=LaTeXView
 Document=FormatAndHeader.tex
 
 [Frame2_View0,0]
-TopLine=17
-Cursor=1440
+TopLine=0
+Cursor=59
 
 [SessionInfo]
 FrameCount=3
-ActiveFrame=0
+ActiveFrame=1
 
