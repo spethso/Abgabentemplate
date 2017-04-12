@@ -7,7 +7,7 @@
 % Kompiliere dieses Modul um eine PDF zu erzeugen.
 
 % Dokumentenart. Ersetze 12pt, falls die Schriftgröße anzupassen ist.
-\documentclass[12pt]{article}
+\documentclass[12pt]{scrartcl}
 % Einbinden der Pakete, des Headers und der Formatierung.
 % Mit den \include und \input Befehlen können Dateien eingebunden werden:
 % \include: Fügt einen Seitenumbruch nach dem Text ein
@@ -25,7 +25,7 @@
 \exercise{Lorem ipsum}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua \ref{fig:baum}. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[level/.style ={sibling distance=60mm/#1}]
@@ -42,7 +42,27 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 \caption{Bin"arbaum, der mit Tikzpicture erzeugt wurde}
 \label{fig:baum}
 \end{figure}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum \ref{fig:automat}. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}[initial text={}]
+	\node[state,initial] (q0) {$q_0$};
+	\node[state] (q1) [below right=of q0] {$q_1$};
+	\node[state] (q2) [above right=of q0] {$q_2$};
+	\node[state,accepting] (q3) [right=of q1] {$q_3$};
+	\path[->] (q0) edge node[below left]{$a$} (q1);
+	\path[->] (q0) edge node[above left]{$b$} (q2);
+	\path[->,loop above] (q2) edge node{$b$} (q2);
+	\path[->] (q2) edge node[left]{$a$} (q1);
+	\path[->] (q1) edge node[below]{$a$} (q3);
+	\path[->,loop below] (q1) edge node{$b$} (q1);
+	\path[->,loop right] (q3) edge node{$a,b$} (q3);
+	\end{tikzpicture}
+	\caption{Endlicher Automat, der mit Tikzpicture erzeugt wurde}
+	\label{fig:automat}
+\end{figure}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
 % Aufgabe 2
 \exercise{Dolor sit amet}
@@ -52,7 +72,6 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 	\item Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 \end{enumerate}
 
-\newpage
 % Aufgabe 3
 \exercise{At vero eos}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata \ref{fig:logo-uni} sanctus est Lorem ipsum dolor sit amet.
@@ -65,6 +84,21 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 	\label{fig:logo-uni}
 \end{figure}
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+% Aufgabe 4
+\exercise{Stet clita kasd}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores \ref{tab:tabelle} et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\begin{table}[!h]	
+	\centering
+  \begin{tabular}{c|r l}	 
+    Messwert 1 & $12$ & $\pm 1$ \\   \hline	 
+    Messwert 2a & $42$ & $\pm 3$ \\	 
+    Messwert 2b & $42$ & $\pm 2$ 	
+  \end{tabular}	
+  \caption{Beispieltabelle}	
+  \label{tab:tabelle}
+\end{table}
+
 
 % Ende des Dokuments
 \end{document}
