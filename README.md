@@ -91,5 +91,5 @@ Beinhaltete Dateien und Ordner
 * figures/: Ordner der alle Bilder beinhaltet.
   Durch Verwendung von PDFLaTeX ist es möglich PDFs, JPGs, PNGs, ... zu verwenden. Es ist empfehlenswert PDFs zu nutzen, um "smooth scaling" zu ermöglichen.
 * ExXX_LastnameOfMembers.tcp: TeXnicCenter Projekt um das kompilieren mit mehreren Dateien zu erleichtern.
-* .latexmk: Diese Datei stellt die Konfiguration für Latexmk bereit.
+* .latexmkrc: Diese Datei stellt die Konfiguration für Latexmk bereit.
 * .gitignore: Diese Datei verhindert dass temporäre Dateien in git commits landen.
