@@ -57,6 +57,27 @@ Zuvor wird jedoch die alte ExXX_LastnameOfMembers.pdf gelöscht.
 Nach dem Ausführen der build.bat wird die erzeugte ExXX_LastnameOfMembers.pdf geöffnet.
 Solltest du die Hauptdatei umbenennen, ändere den Dateinamen ebenfalls im makefile.
 
+Automatisches kompilieren unter Verwendung von Latexmk
+------------------------------------------------------
+Für alle, die [Latexmk](https://www.ctan.org/pkg/latexmk/?lang=de) haben, bietet dieses Template eine einfache .latexmkrc an.
+Falls der Name der Hauptdatei geändert wurde, muss der Name in der .latexmkrc angepasst werden.
+Wenn die Muster gleich bleibt ('Ex' + Übungszahl + '_' + Nachnamen der Teammitglieder), können die beiden Variablen $ExerciseNumber und $LastnameOfMembers jeweils genutzt werden.
+Andernfalls muss die Datei in @default_files angepasst werden.
+Zum kompilieren einfach folgenden Befehl ausführen:
+
+    latexmk
+
+Latexmk bietet den Vorteil, dass es die Anzahl der Kompilierdurchgänge optimiert.
+Somit wird nicht jedes Mal dreimal kompiliert, sondern einmal, wenn es ausreicht.
+
+Zum Löschen der temporären Dateien kann der folgende Befehl genutzt werden:
+
+    latexmk -c
+
+Zum Löschen aller erzeugten Datein (alles, was durch LaTeX erzeugt wird, auch .pdf Dateien) kann folgender Befehl genutzt werden:
+
+    latexmk -C
+
 Beinhaltete Dateien und Ordner
 ==============================
 * ExXX_LastnameOfMembers.tex
@@ -70,3 +91,5 @@ Beinhaltete Dateien und Ordner
 * figures/: Ordner der alle Bilder beinhaltet.
   Durch Verwendung von PDFLaTeX ist es möglich PDFs, JPGs, PNGs, ... zu verwenden. Es ist empfehlenswert PDFs zu nutzen, um "smooth scaling" zu ermöglichen.
 * ExXX_LastnameOfMembers.tcp: TeXnicCenter Projekt um das kompilieren mit mehreren Dateien zu erleichtern.
+* .latexmkrc: Diese Datei stellt die Konfiguration für Latexmk bereit.
+* .gitignore: Diese Datei verhindert dass temporäre Dateien in git commits landen.
