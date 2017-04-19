@@ -10,14 +10,14 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=632
-NormalPos.bottom=665
+NormalPos.top=32
+NormalPos.right=2436
+NormalPos.bottom=847
 Class=LaTeXView
 Document=ExXX_LastnameOfMembers.tex
 
 [Frame0_View0,0]
-TopLine=150
+TopLine=92
 Cursor=765
 
 [Frame1]
@@ -28,9 +28,9 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=632
-NormalPos.bottom=665
+NormalPos.top=32
+NormalPos.right=2436
+NormalPos.bottom=847
 Class=LaTeXView
 Document=Usepackage.tex
 
@@ -46,17 +46,17 @@ MinPos.y=-1
 MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
-NormalPos.top=26
-NormalPos.right=632
-NormalPos.bottom=665
+NormalPos.top=32
+NormalPos.right=2436
+NormalPos.bottom=847
 Class=LaTeXView
 Document=FormatAndHeader.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=59
+TopLine=9
+Cursor=1258
 
 [SessionInfo]
 FrameCount=3
-ActiveFrame=0
+ActiveFrame=2
 
