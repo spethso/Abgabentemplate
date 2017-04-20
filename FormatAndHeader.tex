@@ -13,13 +13,12 @@
 % Counter für das Blatt und die Aufgabennummer.
 % Ersetze die Nummer des Übungsblattes und die Nummer der Aufgabe
 % den Anforderungen entsprechend.
+% Gesetz werden die counter in der hauptdatei, damit siese hier nicht jedes mal verändert werden muss
 % Beachte:
 % \setcounter{countername}{number}: Legt den Wert des Counters fest
 % \stepcounter{countername}: Erhöht den Wert des Counters um 1.
 \newcounter{sheetnr}
-\setcounter{sheetnr}{0} % Nummer des Übungsblattes
 \newcounter{exnum}
-\setcounter{exnum}{1} % Nummer der Aufgabe
 
 % Befehl für die Aufgabentitel
 \newcommand{\exercise}[1]{\section*{Aufgabe \theexnum\stepcounter{exnum}: #1}} % Befehl für Aufgabentitel
