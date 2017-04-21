@@ -17,7 +17,7 @@ Class=LaTeXView
 Document=ExXX_LastnameOfMembers.tex
 
 [Frame0_View0,0]
-TopLine=0
+TopLine=96
 Cursor=920
 
 [Frame1]
@@ -53,10 +53,10 @@ Class=LaTeXView
 Document=FormatAndHeader.tex
 
 [Frame2_View0,0]
-TopLine=3
+TopLine=9
 Cursor=1258
 
 [SessionInfo]
 FrameCount=3
-ActiveFrame=2
+ActiveFrame=0
 
