@@ -80,16 +80,18 @@ Zum Löschen aller erzeugten Datein (alles, was durch LaTeX erzeugt wird, auch .
 
 Beinhaltete Dateien und Ordner
 ==============================
-* ExXX_LastnameOfMembers.tex
-  * Hauptdatei
-  * Füge hier den Inhalt ein, oder binde weitere Dateien ein
-  * Weitere Dateien können mit `\input` eingebunden werden
+* ExXX: Ordner für die abgabenrelevanten Inhalte
+  * ExXX_LastnameOfMembers.tex
+    * Hauptdatei
+    * Füge hier den Inhalt ein, oder binde weitere Dateien ein
+    * Weitere Dateien können mit `\input` eingebunden werden
+  * makefile: Das makefile
+  * build.bat: Zum PDF Generieren unter Windows. Achtung: `make` muss hierfür ausgeführt werden können.
+  * ExXX_LastnameOfMembers.tcp: TeXnicCenter Projekt um das kompilieren mit mehreren Dateien zu erleichtern.
+  * .latexmkrc: Diese Datei stellt die Konfiguration für Latexmk bereit.
 * Usepackage.tex: Datei für das Einbinden von Paketen
 * FormatAndHeader.tex: Datei mit den Formatierungen und den Headereinstellungen.
-* makefile: Das makefile
 * README.md: Diese Datei
 * figures/: Ordner der alle Bilder beinhaltet.
   Durch Verwendung von PDFLaTeX ist es möglich PDFs, JPGs, PNGs, ... zu verwenden. Es ist empfehlenswert PDFs zu nutzen, um "smooth scaling" zu ermöglichen.
-* ExXX_LastnameOfMembers.tcp: TeXnicCenter Projekt um das kompilieren mit mehreren Dateien zu erleichtern.
-* .latexmkrc: Diese Datei stellt die Konfiguration für Latexmk bereit.
 * .gitignore: Diese Datei verhindert dass temporäre Dateien in git commits landen.
