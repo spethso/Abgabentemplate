@@ -12,8 +12,18 @@
 % Mit den \include und \input Befehlen können Dateien eingebunden werden:
 % \include: Fügt einen Seitenumbruch nach dem Text ein
 % \input: Fügt KEINEN Seitenumbruch nach dem Text ein
-\input{Usepackage.tex}
-\input{FormatAndHeader.tex}
+\input{../Usepackage.tex}
+\input{../FormatAndHeader.tex}
+
+% Counter für das Blatt und die Aufgabennummer.
+% Ersetze die Nummer des Übungsblattes und die Nummer der Aufgabe
+% den Anforderungen entsprechend.
+% Definiert werden die Counter in FormatAndHeader.tex
+% Beachte:
+% \setcounter{countername}{number}: Legt den Wert des Counters fest
+% \stepcounter{countername}: Erhöht den Wert des Counters um 1.
+\setcounter{sheetnr}{0} % Nummer des Übungsblattes
+\setcounter{exnum}{1} % Nummer der Aufgabe
 
 % Beginn des eigentlichen Dokuments
 \begin{document}
@@ -80,7 +90,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
 % Bildumgebung
 \begin{figure}[!h]
 	\centering
-		\includegraphics[width=0.5\textwidth]{figures/logo-uni.pdf}
+		\includegraphics[width=0.5\textwidth]{../figures/logo-uni.pdf}
 	\caption{Uni-Logo}
 	\label{fig:logo-uni}
 \end{figure}
