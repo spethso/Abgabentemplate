@@ -11,7 +11,7 @@ Falls du git nicht verwenden möchtest, downloade einfach: https://github.com/sp
 Empfohlene LaTeX Umgebungen
 ---------------------------
 * Offline: Rechtschreibprüfung ist verfügbar in [TeXnicCenter](http://www.texniccenter.org/). 
-* Bitte downloade [Sumatra PDF](http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader-de.html) als Viewer und verbinde die beiden.
+* Bitte downloade [Sumatra PDF](https://www.sumatrapdfreader.org/free-pdf-reader.html) als Viewer und verbinde die beiden.
   Beachte dabei die [Anleitung](http://tex.stackexchange.com/questions/116981/how-to-configure-texniccenter-2-0-with-sumatra-2013-2016-version) für die Konfiguration.
   Verwende [JabRef](http://jabref.sf.net) um deine Literatur zu verwalten.
 * Online: [overleaf](https://www.overleaf.com/). Ebenfalls mit [git support](https://www.overleaf.com/blog/195-new-collaborate-online-and-offline-with-overleaf-and-git-beta#.VYFC2UZejkU).
